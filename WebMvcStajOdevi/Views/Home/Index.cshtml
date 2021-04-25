@@ -1,0 +1,104 @@
+﻿@model IEnumerable<WebMvcStajOdevi.Models.Firmalar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ana Sayfa</h2>
+
+<p>
+    @Html.ActionLink("Yeni Firma Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Firma İsmi
+            @*@Html.DisplayNameFor(model => model.Isim)*@
+        </th>
+        <th>
+            Firma Şehir
+            @*@Html.DisplayNameFor(model => model.Sehir)*@
+        </th>
+        <th>
+            Firma İlçe
+            @*@Html.DisplayNameFor(model => model.Ilce)*@
+        </th>
+        <th>
+            Firma Adres
+            @*@Html.DisplayNameFor(model => model.Adres)*@
+        </th>
+        <th>
+            Firma Telefon
+            @*@Html.DisplayNameFor(model => model.Telefon)*@
+        </th>
+        <th>
+            Firma Kabul Şartı
+            @*@Html.DisplayNameFor(model => model.Kabul)*@
+        </th>
+        <th>
+            Öğrenci Memnuniyeti
+            @*@Html.DisplayNameFor(model => model.Memnun)*@
+        </th>
+        <th>
+            Firma Çalışma Konuları
+            @*@Html.DisplayNameFor(model => model.Konu)*@
+        </th>
+        <th>
+            Firma Beklentisi
+            @*@Html.DisplayNameFor(model => model.Beklenti)*@
+        </th>
+        <th>
+            Stajyer Maaşı
+            @*@Html.DisplayNameFor(model => model.Maas)*@
+        </th>
+        <th>
+            Firma Çalışan Sayısı
+            @*@Html.DisplayNameFor(model => model.Calisan)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Isim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sehir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kabul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memnun)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Konu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Beklenti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Calisan)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

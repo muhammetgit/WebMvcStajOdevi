@@ -1,0 +1,106 @@
+﻿@model WebMvcStajOdevi.Models.Firmalar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Firmalar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Isim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Isim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sehir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sehir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kabul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kabul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memnun)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memnun)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Konu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Konu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beklenti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beklenti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calisan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

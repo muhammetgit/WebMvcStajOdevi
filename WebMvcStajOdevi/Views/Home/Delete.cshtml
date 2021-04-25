@@ -1,0 +1,123 @@
+﻿@model WebMvcStajOdevi.Models.Firmalar
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Sil</h2>
+
+<h3>Bunu silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Firma Sil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Firma İsmi
+            @*@Html.DisplayNameFor(model => model.Isim)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Isim)
+        </dd>
+
+        <dt>
+            Firma Şehir
+            @*@Html.DisplayNameFor(model => model.Sehir)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sehir)
+        </dd>
+
+        <dt>
+            Firma İlçe
+            @*@Html.DisplayNameFor(model => model.Ilce)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilce)
+        </dd>
+
+        <dt>
+            Firma Adres
+            @*@Html.DisplayNameFor(model => model.Adres)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            Firma Telefon
+            @*@Html.DisplayNameFor(model => model.Telefon)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            Firma Kabul Şartı
+            @*@Html.DisplayNameFor(model => model.Kabul)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kabul)
+        </dd>
+
+        <dt>
+            Öğrenci Memnuniyeti
+            @*@Html.DisplayNameFor(model => model.Memnun)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memnun)
+        </dd>
+
+        <dt>
+            Firma Çalışma Konuları
+            @*@Html.DisplayNameFor(model => model.Konu)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Konu)
+        </dd>
+
+        <dt>
+            Firma Beklentisi
+            @*@Html.DisplayNameFor(model => model.Beklenti)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beklenti)
+        </dd>
+
+        <dt>
+            Stajyer Maaşı
+            @*@Html.DisplayNameFor(model => model.Maas)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maas)
+        </dd>
+
+        <dt>
+            Firma Çalışan Sayısı
+            @*@Html.DisplayNameFor(model => model.Calisan)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
+</div>
